@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@500&family=EB+Garamond&family=Open+Sans&family=Poppins&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #2d2a3d;
+    color: #fff;
+}
+
+header h1 {
+    font-weight: 900;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.computerimg img,
+.playerimg img {
+    width: 75%;
+}
+
+.points {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.computerpoints {
+    margin-left: 20px;
+}
+
+.playerpoints {
+    margin-right: 20px;
+}
+
+button {
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 15px;
+    width: 120px;
+    font-size: 1.1em;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    /* margin: 3em; */
+    margin-top: 2.5em;
+    margin-left: 3em;
+    margin-right: 3em;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 11.2em;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+
+
+button:hover {
+    border: 2px solid green;
+    transform: scale(1.2);
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shakecomputer {
+    animation: shakecomputer 0.8s linear;
+}
+
+.shakeplayer {
+    animation: shakeplayer 0.8s linear;
+}
+
+
+@keyframes shakecomputer {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes shakeplayer {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    25% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@media only screen and (max-width: 660px) {
+
+    header{
+        text-align: center;
+    }
+
+    .options{
+        flex-direction: column;
+        margin-right: 1em;
+    }
+
+    .icons{
+        flex-direction: column;
+        gap: 4em;
+        margin-top: 3.2em;
+    }
+    
+    .group{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .images{
+        text-align: center;
+    }
+
+    .points{
+        margin-top: 2em;
+    }
+
+}
