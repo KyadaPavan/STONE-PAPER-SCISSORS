@@ -143,8 +143,9 @@ button:hover {
 
 @media only screen and (max-width: 660px) {
 
-    header{
+    header h1{
         text-align: center;
+        font-size: 2.5em;
     }
 
     .options{
@@ -166,10 +167,11 @@ button:hover {
 
     .images{
         text-align: center;
+        margin-top: 2em;
     }
 
     .points{
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
 }
