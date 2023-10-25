@@ -146,6 +146,7 @@ button:hover {
     header h1{
         text-align: center;
         font-size: 2.5em;
+        margin-top: 8px
     }
 
     .options{
@@ -167,11 +168,11 @@ button:hover {
 
     .images{
         text-align: center;
-        margin-top: 2em;
+        margin-top: 0.5em;
     }
 
     .points{
-        margin-top: 1em;
+        margin-top: 0.2em;
     }
 
 }
