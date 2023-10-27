@@ -21,7 +21,7 @@ options.forEach((option) => {
 
             let computerinput = arr[Math.floor(Math.random() * 3)];
 
-            computer.src = `./${computerinput}Computer.png`
+            computer.src = `${computerinput}Computer.png`
 
             let cpoints = parseInt(computerpoints.innerHTML)
             let ppoints = parseInt(playerpoints.innerHTML)
