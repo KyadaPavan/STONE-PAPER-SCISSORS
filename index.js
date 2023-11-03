@@ -43,13 +43,13 @@ options.forEach((option) => {
     // Compare the player and computer inputs to determine the winner
        
     
-        if (option.innerHTML === "stone") {
+        if (option.innerHTML === "STONE") {
             if (computerinput === "paper") 
               computerpoints.innerHTML = cpoints + 1; 
             else if (computerinput === "scissors")
               playerpoints.innerHTML = ppoints + 1;
             
-        } else if (option.innerHTML === "paper") {
+        } else if (option.innerHTML === "PAPER") {
             if (computerinput === "scissors")
               computerpoints.innerHTML = cpoints + 1;
             else if (computerinput === "stone")
