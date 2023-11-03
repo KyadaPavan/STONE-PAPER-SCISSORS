@@ -22,7 +22,7 @@ options.forEach((option) => {
     // Set the player image source based on the selected option
     
    // player.src = `./${option.textContent}Player.png`;
-    let loweroption = option.toLowerCase();
+    let loweroption = option.textContent.toLowerCase();
     player.src = `./${loweroption}Player.png`;
 
     // Get the possible computer inputs
