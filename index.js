@@ -20,7 +20,10 @@ options.forEach((option) => {
     player.classList.remove("shakeplayer");
 
     // Set the player image source based on the selected option
-    player.src = `./${option.textContent}Player.png`;
+    
+   // player.src = `./${option.textContent}Player.png`;
+    let loweroption = option.toLowerCase();
+    player.src = `./${loweroption}Player.png`;
 
     // Get the possible computer inputs
    // const arr = ["STONE", "PAPER", "SCISSORS"];
