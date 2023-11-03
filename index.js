@@ -5,53 +5,57 @@ let computerpoints = document.querySelector(".computerpoints")
 let playerpoints = document.querySelector(".playerpoints")
 
 
+// option is a string of STONE, PAPER, or SCISSORS
 options.forEach((option) => {
 
-    option.addEventListener("click", () => {
-        computer.classList.add("shakecomputer")
-        player.classList.add("shakeplayer")
+  // Add event listener for click on the option
+ option.addEventListener("click", () => {
+  // Shake the computer and player images
+  computer.classList.add("shakecomputer");
+  player.classList.add("shakeplayer");
 
-        setTimeout(() => {
-            computer.classList.remove("shakecomputer")
-            player.classList.remove("shakeplayer")
+  // After 900 milliseconds, remove the shake class and perform the logic
+  setTimeout(() => {
+    computer.classList.remove("shakecomputer");
+    player.classList.remove("shakeplayer");
 
-            player.src = "./" + option.innerHTML + "Player.png";
+    // Set the player image source based on the selected option
+    player.src = `./${option.textContent}Player.png`;
 
-            const arr = ["STONE", "PAPER", "SCISSORS"]
+    // Get the possible computer inputs
+    const arr = ["STONE", "PAPER", "SCISSORS"];
 
-            let computerinput = arr[Math.floor(Math.random() * 3)];
+    // Get a random computer input
+    let computerinput = arr[Math.floor(Math.random() * 3)];
 
-            computer.src = `./${computerinput}Computer.png`
+    // Set the computer image source based on the computer input
+    computer.src = `./${computerinput}Computer.png`;
 
-            let cpoints = parseInt(computerpoints.innerHTML)
-            let ppoints = parseInt(playerpoints.innerHTML)
+    // Get the current player and computer points
+    let cpoints = parseInt(computerpoints.innerHTML);
+    let ppoints = parseInt(playerpoints.innerHTML);
+
+    // Compare the player and computer inputs to determine the winner
+       
+    
+        if (option.innerHTML === "STONE") {
+            if (computerinput === "PAPER") 
+              computerpoints.innerHTML = cpoints + 1; 
+            else if (computerinput === "SCISSORS")
+              playerpoints.innerHTML = ppoints + 1;
             
-           
-        
-            if (option.innerHTML === "STONE") {
-                if (computerinput === "PAPER") 
-                  computerpoints.innerHTML = cpoints + 1; 
-                else if (computerinput === "SCISSORS")
-                  playerpoints.innerHTML = ppoints + 1;
-                
-            } else if (option.innerHTML === "PAPER") {
-                if (computerinput === "SCISSORS")
-                  computerpoints.innerHTML = cpoints + 1;
-                else if (computerinput === "STONE")
-                  playerpoints.innerHTML = ppoints + 1;
-                  
-            } else {
-                if (computerinput === "STONE")
-                  computerpoints.innerHTML = cpoints + 1;
-                else if (computerinput === "PAPER")
-                  playerpoints.innerHTML = ppoints + 1;
-                  
-            }
-            
-        
+        } else if (option.innerHTML === "PAPER") {
+            if (computerinput === "SCISSORS")
+              computerpoints.innerHTML = cpoints + 1;
+            else if (computerinput === "STONE")
+              playerpoints.innerHTML = ppoints + 1;
 
+        } else {
+            if (computerinput === "STONE")
+              computerpoints.innerHTML = cpoints + 1;
+            else if (computerinput === "PAPER")
+              playerpoints.innerHTML = ppoints + 1;
+            } 
         }, 900);
-
-    })
-
+      })
 })
