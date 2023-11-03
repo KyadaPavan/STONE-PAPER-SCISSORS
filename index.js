@@ -23,7 +23,9 @@ options.forEach((option) => {
     player.src = `./${option.textContent}Player.png`;
 
     // Get the possible computer inputs
-    const arr = ["STONE", "PAPER", "SCISSORS"];
+   // const arr = ["STONE", "PAPER", "SCISSORS"];
+
+     const arr = ["stone", "paper", "scissors"];
 
     // Get a random computer input
     let computerinput = arr[Math.floor(Math.random() * 3)];
